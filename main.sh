@@ -4,5 +4,5 @@ IP="$(ip addr show $1 2>/dev/null | grep inet | head -1 | cut -d ' ' -f 6 | sed 
 
 if [ IP != '' ] 
 then
-    echo $IP
+    echo "$1: $IP"
 fi
